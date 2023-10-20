@@ -1,8 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 from csvFunctions import createCSV
-import os, sys
-
 from finalModel import randomForestPredict
 
 app = Flask(__name__)
@@ -18,7 +16,7 @@ items = []
 def create_item():
     data = [request.get_json()]
 
-    csvData = createCSV(data, "apiTest.csv")
+    csvData = createCSV(data, "./apiTest.csv")
 
     if csvData:
        result = randomForestPredict()
