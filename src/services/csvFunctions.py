@@ -1,18 +1,5 @@
 import csv
 
-example = [
-    {
-        "name": "Item 1",
-        "price": 10.99,
-        "quantity": 5
-    },
-    {
-        "name": "Item 2",
-        "price": 5.99,
-        "quantity": 3
-    }
-]
-
 def createCSV (json, outputPath = "output.csv"):
     fieldnames = json[0].keys()
 
