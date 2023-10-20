@@ -21,7 +21,7 @@ with open('train.csv', 'w', newline='') as csvfile:
     for _ in range(200000):
         marca = random.choice(marcas)
         modelo = random.choice(modelos_apple)
-        preco = random.uniform(300, 5000)
+        preco = random.uniform(0, 5000)
         condicao = random.choice(condicoes)
         memoria = random.choice(memorias)
         tempo = random.randint(1, 365)
